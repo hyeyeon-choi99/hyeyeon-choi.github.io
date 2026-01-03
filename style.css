@@ -183,20 +183,21 @@ footer p { color: var(--gray); font-size: 0.85rem; margin: 0; }
         font-size: 0.7rem !important;
     }
     
-    /* More Works 컨테이너 이미지 - 상세페이지 갤러리와 같은 너비 */
+   /* More Works 컨테이너 - 3열 유지하되 크기 조정 */
     .next-projects-section {
         padding: 100px 0 60px !important;
+        overflow-x: hidden !important; /* 삐져나가기 방지 */
     }
     
     .mini-grid {
-        grid-template-columns: 1fr !important; /* 모바일에서 1열로 */
-        gap: 40px !important;
+        grid-template-columns: repeat(3, 1fr) !important; /* 3열 유지 */
+        gap: 10px !important; /* 간격 줄임 */
     }
     
     .mini-thumb {
-        aspect-ratio: 16/10 !important; /* 비율 유지 */
+        aspect-ratio: 1/1 !important; /* 정사각형으로 */
         width: 100% !important;
-        max-width: 100% !important;
+        overflow: hidden !important;
     }
     
     .mini-thumb img {
@@ -205,18 +206,31 @@ footer p { color: var(--gray); font-size: 0.85rem; margin: 0; }
         object-fit: cover !important;
     }
     
-    /* 상세페이지 갤러리와 동일한 너비로 맞추기 */
-    .container {
+    .m-title {
+        font-size: 0.9rem !important; /* 제목 작게 */
+        margin-bottom: 5px !important;
+    }
+    
+    .mini-item .work-tags {
+        gap: 3px !important;
+    }
+    
+    .mini-item .tag {
+        font-size: 0.55rem !important;
+        padding: 2px 6px !important;
+    }
+    
+    /* More Works 섹션 컨테이너만 조정 */
+    .next-projects-section .container {
         padding: 0 20px !important;
         max-width: 100% !important;
     }
-    
-
     
     /* 갤러리 삐져나가는 문제 */
     .project-gallery {
         overflow-x: hidden !important;
     }
+    
     
     .project-gallery .container {
         max-width: 100% !important;
