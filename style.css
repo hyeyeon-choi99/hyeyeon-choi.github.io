@@ -183,10 +183,35 @@ footer p { color: var(--gray); font-size: 0.85rem; margin: 0; }
         font-size: 0.7rem !important;
     }
     
-    /* 컨테이너 이미지 */
-    .mini-thumb {
-        aspect-ratio: 4/3 !important;
+    /* More Works 컨테이너 이미지 - 상세페이지 갤러리와 같은 너비 */
+    .next-projects-section {
+        padding: 100px 0 60px !important;
     }
+    
+    .mini-grid {
+        grid-template-columns: 1fr !important; /* 모바일에서 1열로 */
+        gap: 40px !important;
+    }
+    
+    .mini-thumb {
+        aspect-ratio: 16/10 !important; /* 비율 유지 */
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .mini-thumb img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+    
+    /* 상세페이지 갤러리와 동일한 너비로 맞추기 */
+    .container {
+        padding: 0 20px !important;
+        max-width: 100% !important;
+    }
+    
+
     
     /* 갤러리 삐져나가는 문제 */
     .project-gallery {
@@ -499,4 +524,3 @@ a.info-value:hover {
     font-weight: bold !important;
 }
 
-/*ㅇㅇㅇ*/
